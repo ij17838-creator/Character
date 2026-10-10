@@ -11,7 +11,7 @@ npx http-server .        # 또는: python3 -m http.server
 # → http://localhost:8080 (python은 :8000)
 ```
 
-모델은 `model.glb` → `character_2048.glb` 순서로 찾습니다. 다른 Mixamo GLB는 설정(⚙️)의 "다른 GLB 모델 열기"로 열거나 화면에 드래그 앤 드롭하면 됩니다.
+모델은 `character_2048.glb`를 먼저 불러오고, 없으면 `model.glb`를 찾습니다. 다른 Mixamo GLB는 설정(⚙️)의 "다른 GLB 모델 열기"로 열거나 화면에 드래그 앤 드롭하면 됩니다.
 
 ## 기능
 

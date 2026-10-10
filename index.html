@@ -175,7 +175,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // ---------------------------------------------------------------------------
 // Config
 // ---------------------------------------------------------------------------
-const MODEL_URLS = ['model.glb', 'character_2048.glb'];
+const MODEL_URLS = ['character_2048.glb', 'model.glb'];
 const MODEL_HEIGHT = 1.7;              // normalize character to ~1.7 world units
 const BONE_PREFIX = /^mixamorig\d*[:_]?/i;
 const COLORS = ['#ff3b6b', '#111827', '#ffffff', '#3b82f6', '#f59e0b', '#a855f7', '#22c55e', '#ef4444', '#06b6d4', '#ec4899', '#78716c', '#facc15'];
@@ -529,7 +529,7 @@ async function loadDefault() {
       console.warn(`[model] ${url} 로드 실패`, err);
     }
   }
-  loaderFail('model.glb를 불러오지 못했습니다.');
+  loaderFail('character_2048.glb를 불러오지 못했습니다.');
 }
 
 async function loadFile(file) {
