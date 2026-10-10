@@ -22,3 +22,22 @@ npx http-server .        # 또는: python3 -m http.server
 - **제스처 타이머**: 30초~5분. 시간이 끝나면 정답을 자동으로 보여줍니다.
 
 단축키: `N` 새 포즈 · `A` 정답 · `L` 카메라 고정 · `P` 펜 · `E` 지우개 · `[` `]` 굵기 · `Ctrl+Z` / `Ctrl+Shift+Z`
+
+## 파일 구조
+
+```
+index.html        마크업(상단 바, 툴바, 설정, 모달, 로더)
+css/style.css     커스텀 스타일
+js/
+  main.js         진입점: UI 연결, 카메라 고정, 새 포즈 흐름, 단축키, 렌더 루프
+  config.js       모델 경로, 기준 키, 본 이름 접두사, 색상 팔레트
+  utils.js        공용 헬퍼($, 난수, 각도 변환)와 뷰포트 크기
+  scene.js        렌더러·카메라·OrbitControls·조명·바닥·pivot
+  model.js        리그 상태, 본 매핑, 레스트 포즈·몸 기준 축 계산
+  loader.js       기본 GLB 로딩, 파일 선택/드래그 앤 드롭
+  pose.js         가동 범위 기반 랜덤 포즈 생성과 전환 애니메이션
+  drawing.js      2D 드로잉 캔버스, 포인터 입력, 되돌리기 기록
+  toolbar.js      펜/지우개, 색상, 굵기, 되돌리기 버튼
+  overlay.js      정답 골조 투영·그리기, 모델 반투명 처리
+  timer.js        제스처 타이머
+```
